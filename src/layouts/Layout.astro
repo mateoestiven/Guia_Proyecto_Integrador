@@ -1,0 +1,159 @@
+---
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="icon" href="../img/icon.png" type="image/png" />
+    <title>AprendeConceptos</title>
+  </head>
+
+  <body class="bg-sky-100 font-sans">
+    <!-- ________________________________________________________________  MENU ____________________________________________________________-->
+
+    <div class="bg-teal-400 p-4">
+      <div class="container mx-auto flex justify-between">
+        <div class="w-10 h-10 overflow-hidden">
+          <img class="max-w-full h-auto" src="../img/icon.png" alt="" />
+        </div>
+
+        <div class="w-48 flex justify-between">
+          <div>
+            <a href="./html/iniciosesion.html" class="text-white"
+              >Iniciar sesión</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto p-4 text-center mb-20">
+      <h1 class="text-4xl font-bold mb-4 text-purple-600 font-mono">
+        ¡Bienvenido!
+      </h1>
+      <div class="my-10 ">
+        <div class="max-w-xl mx-auto  bg-teal-400 p-3 rounded">
+          <h1 class="font-bold font-mono uppercase text-xl">Como empezar</h1>
+          <ul  class="bg-white p-3 rounded">
+            <li>1- ingresa con tu cuenta, si en llegado caso no tienes puedes crear una <a class="border-b-2 border-black" href="./html/regitro.html">aqui.</a></li>
+            <li>2- Despues de haber ingresado con tu cuenta podras utilizar todas las funcionalidades de la pagina.</li>
+            <li>3- Mas abajo puedes realizar un cuestonario para realizar un acercamiento a la modalidad de la pagina.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <!-- Sección de Juegos -->
+        <div class="p-4 bg-white rounded shadow-md">
+          <h2 class="text-2xl font-bold mb-2 text-blue-800 font-mono">
+            Ciencias sociales
+          </h2>
+          <img
+            src="../img/ciencias natulares.jpg"
+            alt="Icono de Juegos"
+            class="w-16 h-16 mx-auto mb-4"
+          />
+          <p class="text-gray-700">
+            ¡Diviértete jugando nuestros emocionantes juegos!
+          </p>
+          <a href="./html/cienciasSociales.html" class="mt-2 block text-blue-500 hover:underline"
+            >Empiza a Aprender</a
+          >
+        </div>
+
+        <!-- Sección de Aprendizaje -->
+        <div class="p-4 bg-white rounded shadow-md">
+          <h2 class="text-2xl font-bold mb-2 text-green-800 font-mono">
+            Ciencias Naturales
+          </h2>
+          <img
+            src="../img/ciencias natulares.jpg"
+            alt="Icono de Aprendizaje"
+            class="w-16 h-16 mx-auto mb-4"
+          />
+          <p class="text-gray-700">
+            Aprende cosas nuevas mientras te diviertes.
+          </p>
+          <a href="/src/pages/cienciasNaturales.astro" class="mt-2 block text-green-500 hover:underline"
+            >Empiza a Aprender</a
+          >
+        </div>
+
+        <div class="p-4 bg-white rounded shadow-md">
+          <h2 class="text-2xl font-bold mb-2 text-green-800 font-mono">
+            Lengua castellana
+          </h2>
+          <img
+            src="../img/ciencias natulares.jpg"
+            alt="Icono de Aprendizaje"
+            class="w-16 h-16 mx-auto mb-4"
+          />
+          <p class="text-gray-700">
+            Aprende cosas nuevas mientras te diviertes.
+          </p>
+          <a href="./html/lenguaCastellana.html" class="mt-2 block text-green-500 hover:underline"
+            >Empiza a Aprender</a
+          >
+        </div>
+        <div class="p-4 bg-white rounded shadow-md">
+          <h2 class="text-2xl font-bold mb-2 text-green-800 font-mono">
+            Ética
+          </h2>
+          <img
+            src="../img/ciencias natulares.jpg"
+            alt="Icono de Aprendizaje"
+            class="w-16 h-16 mx-auto mb-4"
+          />
+          <p class="text-gray-700">
+            Aprende cosas nuevas mientras te diviertes.
+          </p>
+          <a href="./html/etica.html" class="mt-2 block text-green-500 hover:underline"
+            >Empiza a Aprender</a
+          >
+        </div>
+      </div>
+    </div>  
+    <!-- ############################################################## seccion de preguntas ########################################################################## -->
+    <div class="mx-auto flex flex-col max-w-3xl gap-5 p-3 bg-sky-100 mb-20">
+      <div
+        class="p-2 text-lg font-bold text-center border-2 border-black rounded-full bg-amber-300"
+      >
+        Minijuego
+      </div>
+      <section
+        id="seccion-preguntas"
+        class="flex flex-col gap-3 p-3 bg-white rounded-2xl"
+      ></section>
+      <button id="btn-siguiente" class="p-3 bg-white rounded-full hover:bg-green-400">
+        Siguiente
+      </button>
+    </div>  
+    <!-- ############################################################## seccion de preguntas ########################################################################## -->
+    <div class="mx-auto  flex justify-evenly">
+      <div class="max-w-xl  bg-teal-400 p-3 rounded">
+        <h1 class="font-bold font-mono uppercase text-xl">Sobre Nosotros</h1>
+        <p class="bg-white p-3 rounded">Nuestra propuesta empieza gracias a la materia de proyecto integrador,
+          para aportar al objetivo de desarrollo sostenible de educacion de calidad y asi ayudar a cerrar la brecha en la falta de educacion,
+          ya que en 2020, a medida que la pandemia de la COVID-19 se propagaba  por todo el planeta, la mayor parte de los países anunciaron el cierre temporal
+          de las escuelas, lo que afectó a más del 91 % de los estudiantes en todo el mundo. En abril de 2020, cerca de 1600 millones de niños y jóvenes estaban fuera de la escuela. 
+          Igualmente, cerca de 369 millones de niños que dependen de los comedores escolares tuvieron que buscar otras fuentes de nutrición diaria.
+        </p>
+      </div>
+     
+    </div>
+    
+
+    <script type="module" src="./js/main.js"></script>
+    <!-- <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js
+"></script> -->
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-80">
+      <p>&copy; 2023 Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

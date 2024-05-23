@@ -19,11 +19,11 @@ export class RenderPreguntasyRespuestas {
       btnSiguiente.innerText = 'Finalizar'
       if(this.p<20){
       setTimeout(function () {
-        window.location.href = '/layouts/Layout.astro';
+        window.location.href = 'http://localhost:4321/';
     }, 2000);
     }else{
       setTimeout(function () {
-        window.location.href = '/layouts/Layout.astro';
+        window.location.href = 'http://localhost:4321/';
         }, 2000);
     }
     
